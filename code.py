@@ -1,4 +1,5 @@
 # bosch_project1
+#Done by suchuu
 from tensorflow.keras.layers import Conv2D,Flatten,Dense,MaxPool2D,BatchNormalization,GlobalAveragePooling2D
 from tensorflow.keras.applications.resnet50 import preprocess_input,decode_predictions
 from tensorflow.keras.preprocessing.image import ImageDataGenerator,load_img
