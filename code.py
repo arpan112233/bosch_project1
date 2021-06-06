@@ -15,9 +15,9 @@ import os
 h,w = (225,225)
 batch_size = 32
 
-train_data_dir = r"robomop/train/"
-valid_data_dir = r"robomop/validation/"
-test_data_dir = r"robomop/test/"
+train_data_dir = r"robomop_images/train/"
+valid_data_dir = r"robomop_images/validation/"
+test_data_dir = r"robomop_images/test/"
 
 
 train_datagen = ImageDataGenerator(preprocessing_function=preprocess_input,
@@ -60,7 +60,7 @@ for layer in base_model.layers:
     
 model.compile(optimizer = 'adam', loss ='categorical_crossentropy', metrics = ['accuracy'])
 
-model.fit(train_generator,epochs = 10)
+model.fit(train_generator,epochs = 25)
 
 test_loss, test_acc = model.evaluate(test_generator,verbose=2)
 p = (test_acc * 100)
